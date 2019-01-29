@@ -125,7 +125,7 @@ nav ul li:hover{
 	bottom: 0;
 	background-color: rgba(0, 0, 0, 0.7);
 	z-index: 2;
-	cursor: pointer;
+	/*cursor: pointer;*/
 	display: none;
 	color: white;
 }
@@ -135,8 +135,13 @@ nav ul li:hover{
 	display: inline-block;
 	padding: 0 15px 0 15px;
 	position: fixed;
-	top: 85%;
-	left: 40%;
+	top: 90%;
+	left: 43%;
+	font-size: 0.7rem;
+}
+
+.case-overlay{
+	min-height: 75%;
 }
 
 #presentation{
@@ -147,7 +152,7 @@ nav ul li:hover{
 	left: 5%;
 }
 
-#presentation h2{
+#presentation h2, #contact h2{
 	text-align: center;
 }
 
@@ -171,4 +176,48 @@ nav ul li:hover{
 	display: block;
 	width: 350px;
 	margin: 10px auto;
+	line-height: 25px;
+}
+
+#contact{
+	border: solid 1px white;
+	display: inline-block;
+	position: fixed;
+	top: 10%;
+	right: 5%;
+}
+
+#contact p{
+	width: 350px;
+	margin: 20px 50px;
+	line-height: 25px;
+	text-align: justify;
+}
+
+.reservation-button{
+	color: rgba(255,2555,255,1);
+	border-radius: 30px;
+	font-size: 1.7em;
+	width: 200px;
+	line-height: 70px;
+	text-align: center;
+	background-color: rgba(137, 250, 38, 0.95);
+	transition: all 1s;
+}
+
+.reservation-button:hover{
+	background-color: rgba(201, 0, 140, 0.9);
+	transition: all 1s;
+	cursor: pointer;
+	display: block;
+
+}
+#overlay-reservation-button{
+	margin: 30px auto;
+}
+#homepage-reservation-button{
+	position: fixed;
+	bottom: 10%;
+	right: 5%;
+	/*box-shadow: rgba(201, 0, 140, 0.9)  5px 5px;*/
 }
