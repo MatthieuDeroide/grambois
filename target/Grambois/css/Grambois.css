@@ -1,0 +1,174 @@
+html{
+	scroll-behavior: smooth;
+}
+
+body{
+	margin: 0;
+    font-family: Arial, Helvetica, Verdana, sans-serif;
+}
+
+header{
+	width: 100%;
+}
+
+h1{
+	color: white;
+	margin: 30px 100px;
+
+}
+
+nav{
+	z-index: 2;
+}
+
+p{
+	text-align: justify;
+}
+
+nav ul{
+	display: flex;
+	flex-direction: row;
+}
+
+nav ul li{
+	line-height: 35px;
+	width: 130px;
+	list-style-type: none;
+	color: white;
+	margin-left: 55px;
+	text-align: center;
+	border-radius: 15px;
+	
+}
+
+nav ul li:hover{
+	color: #6EC76C;
+	font-weight: bold;
+	transition: color 0.3s;
+	cursor: pointer;
+
+}
+
+
+
+
+#accueilPhoto1{
+	position: relative;
+	top: -190px;
+	background-image: url("../Img/DSC_2344.jpg");
+	height: 800px;
+	background-size: 100%;
+	margin-bottom: -190px;
+	z-index: -3 ;
+}
+
+
+
+.text{
+
+	min-height: 150px;
+	width: 100%; 
+}
+
+.text p{
+	display: block;
+	width: 75%;
+	margin: 50px auto;
+}
+
+#accueilPhoto2{
+	background-image: url("../Img/DSC_2313.jpg");
+		height: 800px;
+	background-size: 100%;
+}
+
+#accueilPhoto3{
+		background-image: url("../Img/DSC_2320.jpg");
+		height: 800px;
+	background-size: 100%;
+}
+
+#accueilPhoto4{
+		background-image: url("../Img/DSC_2391.jpg");
+		height: 800px;
+	background-size: 100%;
+}
+
+#top-page-button{
+	position: fixed;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 25px;
+	top : 5%;
+	left: 45%;
+	background-color: rgb(0,0,0);
+	color: white;
+	transition: all 1s;
+	display: none;
+}
+
+#top-page-button p{
+	font-size: 0.7em;
+}
+
+#top-page-button:hover{
+	cursor: pointer;
+}
+
+#overlay{
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left:0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.7);
+	z-index: 2;
+	cursor: pointer;
+	display: none;
+	color: white;
+}
+
+#infoclique{
+	border: solid 1px white;
+	display: inline-block;
+	padding: 0 15px 0 15px;
+	position: fixed;
+	top: 85%;
+	left: 40%;
+}
+
+#presentation{
+	border: solid 1px white;
+	display: inline-block;
+	position: fixed;
+	top: 10%;
+	left: 5%;
+}
+
+#presentation h2{
+	text-align: center;
+}
+
+#presentation article{
+	display: flex;
+	flex-direction: row;
+}
+
+#presentation figure img{
+	height: 150px;
+	width: 150px;
+	border-radius: 100px;
+}
+
+#presentation figure figcaption{
+	text-align: center;
+}
+
+#presentation p{
+	text-align: justify;
+	display: block;
+	width: 350px;
+	margin: 10px auto;
+}
