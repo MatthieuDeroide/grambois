@@ -20,7 +20,7 @@ public class HomeServlet extends GenericServlet {
         TemplateEngine engine = createTemplateEngine(request.getServletContext());
 
         WebContext context = new WebContext(request, response, request.getServletContext());
-
+        request.setCharacterEncoding("UTF-8");
         engine.process("index", context, response.getWriter());
     }
 }
