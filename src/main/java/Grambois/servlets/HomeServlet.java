@@ -1,5 +1,7 @@
 package Grambois.servlets;
 
+import Grambois.dao.TextDAO;
+import Grambois.services.TextService;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.WebContext;
 
@@ -9,6 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.net.URISyntaxException;
 
 @WebServlet("/index")
 public class HomeServlet extends GenericServlet {
@@ -20,7 +23,10 @@ public class HomeServlet extends GenericServlet {
         TemplateEngine engine = createTemplateEngine(request.getServletContext());
 
         WebContext context = new WebContext(request, response, request.getServletContext());
-        request.setCharacterEncoding("UTF-8");
+
+
+
+        System.out.println(TextService.getInstance().getText());
         engine.process("index", context, response.getWriter());
     }
 }

@@ -19,6 +19,8 @@ window.onload = function(){
         document.getElementById("overlay").style.display = "none";
     };
 
+    getText();
+
 };
 
 window.onscroll = function(){

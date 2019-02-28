@@ -54,3 +54,29 @@ function displayTopPageButton(actualYPosition){
     };
 };
 
+function setText(text) {
+    console.log(text);
+    document.getElementById("text0").innerHTML= text;
+
+};
+
+function getText(textId) {
+    let text;
+    let textRequest = new XMLHttpRequest();
+    let url = "ws/text";
+
+    textRequest.open("GET",url,true);
+    textRequest.responseType = "json";
+
+    textRequest.onload = function () {
+        console.log(this.response);
+        text = this.response;
+        setText(text)
+    };
+
+    textRequest.send();
+
+};
+
+
+
