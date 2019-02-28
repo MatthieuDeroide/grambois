@@ -5,10 +5,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jdk.nashorn.internal.parser.JSONParser;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.awt.*;
 
@@ -16,9 +13,10 @@ import java.awt.*;
 public class TextController {
 
     @GET
+    @Path("/{textID}")
     @Produces(MediaType.APPLICATION_JSON)
-    public String getText(@QueryParam("textID") Integer textID) throws JsonProcessingException {
-        String text = TextService.getInstance().getText();
+    public String getText(@PathParam("textID") Integer textID) throws JsonProcessingException {
+        String text = TextService.getInstance().getText(textID);
         ObjectMapper mapper = new ObjectMapper();
         String textJson = mapper.writeValueAsString(text);
         return textJson;

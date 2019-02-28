@@ -12,20 +12,13 @@ public class TextDAO {
 
 
         // The name of the file to open.
-        Path fileName = Paths.get(this.getClass().getClassLoader().getResource("Texte/Erreur.txt").toURI());
+        Path fileName;
         String pathInfo = "Texte/Text";
 
-        switch (textID){
-
-            case 0:
-                fileName = Paths.get(this.getClass().getClassLoader().getResource("Texte/WelcomeText.txt").toURI());
-            break;
-
-
-
-
-
-
+        if(textID == 0) {
+            fileName = Paths.get(this.getClass().getClassLoader().getResource("Texte/WelcomeText.txt").toURI());
+        }else{
+            fileName = Paths.get(this.getClass().getClassLoader().getResource(pathInfo+textID+".txt").toURI());
         }
 
         // This will reference one line at a time

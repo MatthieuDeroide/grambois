@@ -26,7 +26,7 @@ public class HomeServlet extends GenericServlet {
 
 
 
-        System.out.println(TextService.getInstance().getText());
+        System.out.println(TextService.getInstance().getText(1));
         engine.process("index", context, response.getWriter());
     }
 }

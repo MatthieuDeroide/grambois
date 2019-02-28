@@ -6,7 +6,7 @@ window.onload = function(){
     document.getElementById("gite-button").onclick = function(){
     	smoothScroll("accueilText2");
     };
-    document.getElementById("chambres-button").onclick = function(){
+    document.getElementById("activite-button").onclick = function(){
     	smoothScroll("accueilText3");
     };
     document.getElementById("contact-button").onclick = function(){
@@ -19,7 +19,11 @@ window.onload = function(){
         document.getElementById("overlay").style.display = "none";
     };
 
-    getText();
+
+    getText(0);
+    getText(1);
+    getText(2);
+    getText(3);
 
 };
 

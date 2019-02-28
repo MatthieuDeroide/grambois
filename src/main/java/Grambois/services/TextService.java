@@ -16,13 +16,13 @@ public class TextService {
 
     private TextDAO textDAO = new TextDAO();
 
-    public String getText(){
-        String welcomeText = "";
+    public String getText(int textID){
+        String text = "";
         try {
-            welcomeText = textDAO.getText(0);
+            text = textDAO.getText(textID);
         } catch (URISyntaxException e) {
             e.printStackTrace();
         }
-        return  welcomeText;
+        return  text;
     }
 }
