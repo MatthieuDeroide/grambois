@@ -2,6 +2,7 @@ package Grambois.services;
 
 import Grambois.dao.TextDAO;
 
+import java.io.IOException;
 import java.net.URISyntaxException;
 
 public class TextService {
@@ -18,11 +19,12 @@ public class TextService {
 
     public String getText(int textID){
         String text = "";
-        try {
-            text = textDAO.getText(textID);
-        } catch (URISyntaxException e) {
-            e.printStackTrace();
-        }
+        text = textDAO.getText(textID);
         return  text;
+    }
+
+    public  void  changeText(Integer textID, String newText){
+        textDAO.changeText(textID,newText);
+
     }
 }

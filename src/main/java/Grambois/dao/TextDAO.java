@@ -4,14 +4,16 @@ import java.io.*;
 import java.net.URISyntaxException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.sql.*;
 
 public class TextDAO {
 
+    /**
     public String getText(int textID) throws URISyntaxException {
 
 
 
-        // The name of the file to open.
+// The name of the file to open.
         Path fileName;
         String pathInfo = "Texte/Text";
 
@@ -28,7 +30,7 @@ public class TextDAO {
         try {
             // FileReader reads text files in the default encoding.
             /*FileReader fileReader =
-                    new FileReader(String.valueOf(fileName));*/
+                    new FileReader(String.valueOf(fileName));
 
             InputStreamReader fileReader = new InputStreamReader(new FileInputStream(String.valueOf(fileName)),"UTF-8");
 
@@ -60,8 +62,57 @@ public class TextDAO {
             // ex.printStackTrace();
         }
         return null;
+    }*/
+
+    public String getText(int textID){
+        String sqlQuery = "SELECT * FROM Texts WHERE Textid=?;";
+        try (Connection connection = DataSourceProvider.getDataSource().getConnection()) {
+            try (PreparedStatement statement = connection.prepareStatement(sqlQuery)) {
+                statement.setInt(1, textID);
+                try (ResultSet resultSet = statement.executeQuery()) {
+                    if (resultSet.next()) {
+                        return  resultSet.getString("Text");
+                    }
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
+    /**
+    public void changeText(Integer textID, String text) throws URISyntaxException, IOException {
+
+        Path fileName = Paths.get(this.getClass().getClassLoader().getResource("Texte/WelcomeText.txt").toURI());
+
+        /*Writer out = new BufferedWriter(new OutputStreamWriter(
+                new FileOutputStream(String.valueOf(fileName)), "UTF-8"));
+        try {
+            out.write("I would like it to works plz");
+        } finally {
+            out.close();
+        }
+
+        PrintWriter writer = new PrintWriter(String.valueOf(fileName),"UTF-8");
+        writer.print("bonsoir");
+        writer.close();
+    }*/
+
+    public void changeText(Integer textID, String text){
+        String sqlQuery = "UPDATE texts SET text=? WHERE textID=?;";
+        try (Connection connection = DataSourceProvider.getDataSource().getConnection()) {
+            try (PreparedStatement statement = connection.prepareStatement(sqlQuery)) {
+
+                statement.setString(1, text);
+                statement.setInt(2,textID);
+
+                statement.executeUpdate();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
 }
 

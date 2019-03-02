@@ -1,7 +1,5 @@
 package Grambois.servlets;
 
-import Grambois.dao.TextDAO;
-import Grambois.services.TextService;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.WebContext;
 
@@ -11,10 +9,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.net.URISyntaxException;
 
-@WebServlet("/index")
-public class HomeServlet extends GenericServlet {
+@WebServlet("/nwusr")
+public class NewUserServlet extends GenericServlet{
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
@@ -24,6 +21,6 @@ public class HomeServlet extends GenericServlet {
 
         WebContext context = new WebContext(request, response, request.getServletContext());
 
-        engine.process("index", context, response.getWriter());
+        engine.process("nwusr", context, response.getWriter());
     }
 }
