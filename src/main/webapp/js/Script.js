@@ -70,7 +70,6 @@ function getText(textId) {
     textRequest.responseType = "json";
 
     textRequest.onload = function () {
-        console.log(this.response);
         text = this.response;
         setText(textId,text);
     };

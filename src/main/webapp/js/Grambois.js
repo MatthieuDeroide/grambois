@@ -18,6 +18,13 @@ window.onload = function(){
     document.getElementById("overlay").onclick = function(){
         document.getElementById("overlay").style.display = "none";
     };
+    document.getElementById("connexion-button").onclick = function(){
+        document.getElementById("login-overlay").style.display = "block";
+    };
+
+    document.getElementById("log-back").onclick = function(){
+        document.getElementById("login-overlay").style.display = "none";
+    };
 
 
     getText(0);

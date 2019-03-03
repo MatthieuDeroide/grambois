@@ -5,14 +5,61 @@
 
     <title>Grambois - Admin</title>
 
-    <link rel="stylesheet" type="text/css" href="">
+    <link rel="stylesheet" type="text/css" href="css/admin.css">
+    <link rel="stylesheet" type="text/css" href="css/textmanager.css">
 
-    <script src="" type="text/javascript"></script>
-    <script src="" type="text/javascript"></script>
+    <script src="js/admin.js" type="text/javascript"></script>
 </head>
 <body>
+<div id="background"></div>
 
-<h1>coucou</h1>
+<header id="header">
+    <h1>Grambois - Gestion </h1>
+    <p id="deconnexion-button">D&eacuteconnexion</p>
+
+
+    <nav>
+        <ul>
+            <li id="news-manager-button">
+                Gestion de l'actualit&eacute;
+            </li>
+            <li id="resa-manager-button">
+                Gestion des r&eacute;servations
+            </li>
+            <li id="text-manager-button">
+                Gestion des textes
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<div id="change-text">
+    <h2> Gestion des textes </h2>
+
+    <div class="changebox">
+        <h3>Texte de la rubrique: Accueil</h3>
+        <textarea name="text3" id="text0"></textarea>
+        <div class="send-button" id="send-button-text0">Changer</div>
+    </div>
+
+    <div class="changebox">
+        <h3>Texte de la rubrique: Le lieu</h3>
+        <textarea name="text3" id="text1"></textarea>
+        <div class="send-button" id="send-button-text1">Changer</div>
+    </div>
+
+    <div class="changebox">
+        <h3>Texte de la rubrique: Les activit&eacute;s</h3>
+        <textarea name="text3" id="text2"></textarea>
+        <div class="send-button" id="send-button-text2">Changer</div>
+    </div>
+
+    <div class="changebox">
+        <h3>Texte de la rubrique: Contact</h3>
+        <textarea name="text3" id="text3"></textarea>
+        <div class="send-button" id="send-button-text3">Changer</div>
+    </div>
+</div>
 
 </body>
 </html>

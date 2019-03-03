@@ -1,6 +1,7 @@
 package Grambois.services;
 
 import Grambois.dao.UserDAO;
+import Grambois.pojos.User;
 
 import java.sql.SQLException;
 
@@ -18,5 +19,9 @@ public class UserService {
 
     public void createUser(String mail, String pwd){
         userDAO.createUser(mail,pwd);
+    }
+
+    public User getUser(String mail){
+        return userDAO.getUser(mail);
     }
 }

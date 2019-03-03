@@ -115,7 +115,7 @@ nav ul li:hover{
 	cursor: pointer;
 }
 
-#overlay{
+.overlay-class{
 	position: fixed;
 	height: 100%;
 	width: 100%;
@@ -221,3 +221,67 @@ nav ul li:hover{
 	right: 5%;
 	/*box-shadow: rgba(201, 0, 140, 0.9)  5px 5px;*/
 }
+
+#login-overlay{
+	display: none;
+}
+
+#connexion-button{
+	color: white;
+	font-size: 0.8em;
+	display: inline;
+	position: absolute;
+	top:0%;
+	right: 5%;
+	cursor: pointer;
+}
+
+#connexion-button:hover{
+	text-decoration: underline;
+}
+
+#login-overlay h3{
+	position: absolute;
+	font-size: 2.5em;
+	left: 50px;
+	cursor: pointer;
+}
+
+#login-overlay h3:hover{
+	text-decoration: underline;
+}
+
+#form-box{
+	margin: 15% auto;
+	width: 350px;
+	text-align: center;
+}
+
+#form-box form{
+
+}
+
+#form-box form input{
+	display: block;
+	margin: auto;
+	margin-top: 10px;
+	width: 250px;
+	border-radius: 10px;
+	border: solid 1px white;
+}
+
+#submit{
+	max-width: 100px;
+	height: 30px;
+	color: white;
+	background-color: rgba(137, 250, 38, 0);
+	width: 100px;
+}
+
+#submit:hover{
+	cursor:pointer;
+	color:black;
+	background-color: white;
+}
+
+

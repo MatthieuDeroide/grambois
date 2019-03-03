@@ -13,6 +13,7 @@
 <body>
 	<header id="header">
 		<h1>Grambois</h1>
+		<p id="connexion-button">Connexion</p>
 	
 
 		<nav>
@@ -42,7 +43,7 @@
 
 	<div class="reservation-button" id="homepage-reservation-button">R&eacute;server </div>
 
-	<div id="overlay">
+	<div class="overlay-class" id="overlay">
 		<div class="case-overlay" id="presentation">
 			<h2>Vos h&ocirc;tes</h2>
 
@@ -65,6 +66,7 @@
 			</p>
 			
 		</div>
+
 		<div id="contact" class="case-overlay">
 			<h2>Contact</h2>
 			<article>
@@ -80,6 +82,18 @@
 		</div>
 		<div id="infoclique">
 			<p>Cliquez n'importe o&ugrave; pour quitter</p>
+		</div>
+	</div>
+
+	<div class="overlay-class" id="login-overlay">
+		<h3 id="log-back">Retour</h3>
+		<div id="form-box">
+			<h2> Connexion </h2>
+			<form method="post">
+				<input type="email" name="mail" placeholder="Mail">
+				<input type="password" name="password" placeholder="Mot de passe">
+				<input type="submit" value="Connexion" id="submit">
+			</form>
 		</div>
 	</div>
 
