@@ -105,7 +105,7 @@ nav ul li:hover{
 
 .changebox textarea{
     width: 90%;
-    line-height: 40px;
+    height: 200px;
 
     margin-top: 20px;
 }

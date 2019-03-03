@@ -21,4 +21,12 @@ public class TextController {
         String textJson = mapper.writeValueAsString(text);
         return textJson;
     }
+
+    @POST
+    @Path("/{textID}")
+    @Consumes(MediaType.APPLICATION_JSON)
+    public void changeText(@PathParam("textID") Integer textID, String newText){
+
+        TextService.getInstance().changeText(textID,newText);
+    }
 }
