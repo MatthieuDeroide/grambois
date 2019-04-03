@@ -50,22 +50,26 @@ nav ul li:hover{
 }
 
 
-
+#accueil{
+    margin-top: 45%;
+}
 
 #accueilPhoto1{
-	position: relative;
-	top: -190px;
-	background-image: url("../Img/DSC_2344.jpg");
-	height: 800px;
+	position: fixed;
+	top: 0;
+    left: 0;
+	background: url("../Img/DSC_2344.jpg") no-repeat;
+	height: 100%;
+    width: 100%;
 	background-size: 100%;
-	margin-bottom: -190px;
 	z-index: -3 ;
 }
 
 
 
 .text{
-
+    display: inline-block;
+    background: white;
 	min-height: 150px;
 	width: 100%; 
 }
@@ -74,22 +78,23 @@ nav ul li:hover{
 	display: block;
 	width: 75%;
 	margin: 50px auto;
+    background: white;
 }
 
 #accueilPhoto2{
-	background-image: url("../Img/DSC_2313.jpg");
+	background: url("../Img/DSC_2313.jpg") no-repeat;
 		height: 800px;
 	background-size: 100%;
 }
 
 #accueilPhoto3{
-		background-image: url("../Img/DSC_2320.jpg");
+		background: url("../Img/DSC_2320.jpg") no-repeat;
 		height: 800px;
 	background-size: 100%;
 }
 
 #accueilPhoto4{
-		background-image: url("../Img/DSC_2391.jpg");
+		background: url("../Img/DSC_2391.jpg")no-repeat;
 		height: 800px;
 	background-size: 100%;
 }

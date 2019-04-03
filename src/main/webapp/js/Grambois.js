@@ -1,13 +1,26 @@
 
 window.onload = function(){
+    document.getElementById("page-chambres").hidden = true;
+
     document.getElementById("accueil-button").onclick = function(){
+        document.getElementById("page-chambres").hidden = true;
+        document.getElementById("accueil").hidden = false;
         smoothScroll("accueilText1");
     };
     document.getElementById("gite-button").onclick = function(){
+        document.getElementById("page-chambres").hidden = true;
+        document.getElementById("accueil").hidden = false;
     	smoothScroll("accueilText2");
     };
     document.getElementById("activite-button").onclick = function(){
+        document.getElementById("page-chambres").hidden = true;
+        document.getElementById("accueil").hidden = false;
     	smoothScroll("accueilText3");
+    };
+    document.getElementById("chambre-button").onclick = function(){
+        document.getElementById("page-chambres").hidden = false;
+        document.getElementById("accueil").hidden = true;
+        smoothScroll("accueilText3");
     };
     document.getElementById("contact-button").onclick = function(){
         document.getElementById("overlay").style.display = "block";
