@@ -54,7 +54,7 @@ nav ul li:hover{
     margin-top: 45%;
 }
 
-#accueilPhoto1{
+#background-photo{
 	position: fixed;
 	top: 0;
     left: 0;
@@ -71,7 +71,7 @@ nav ul li:hover{
     display: inline-block;
     background: white;
 	min-height: 150px;
-	width: 100%; 
+	width: 100%;
 }
 
 .text p{
@@ -81,21 +81,27 @@ nav ul li:hover{
     background: white;
 }
 
+
+
+.photo{
+	width: 100%;
+	padding-top: 56.25%;
+	margin: -5% 0;
+}
+
+
 #accueilPhoto2{
 	background: url("../Img/DSC_2313.jpg") no-repeat;
-		height: 800px;
 	background-size: 100%;
 }
 
 #accueilPhoto3{
-		background: url("../Img/DSC_2320.jpg") no-repeat;
-		height: 800px;
+	background: url("../Img/DSC_2320.jpg") no-repeat;
 	background-size: 100%;
 }
 
 #accueilPhoto4{
-		background: url("../Img/DSC_2391.jpg")no-repeat;
-		height: 800px;
+	background: url("../Img/DSC_2391.jpg")no-repeat;
 	background-size: 100%;
 }
 
