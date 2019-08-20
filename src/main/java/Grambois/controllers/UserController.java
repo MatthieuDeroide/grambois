@@ -15,7 +15,7 @@ import java.util.List;
 public class UserController {
 
 
-    /*
+
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     public Response createUser(UserDto userDto){
@@ -24,7 +24,7 @@ public class UserController {
         UserService.getInstance().createUser(user.getMail(), PasswdUtil.genererMotDePasse(user.getPwd()));
         return Response.status(201).build();
     }
-    */
+    
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
